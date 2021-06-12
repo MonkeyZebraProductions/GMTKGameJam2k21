@@ -15,10 +15,14 @@ TagManager:
   - 
   - Player
   - Object
+<<<<<<< Updated upstream
   - 
   - Solid
   - Delicate
   - RotationObject
+=======
+  - Liftable
+>>>>>>> Stashed changes
   - 
   - 
   - 
