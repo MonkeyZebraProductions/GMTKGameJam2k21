@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class Lift : MonoBehaviour
 {
-    public GameObject liftable;
-    private bool canLift;
+    public GameObject Liftable;
+    public Transform holdSpot;
+    private Collider2D liftCollider;
+    private bool canLift, iscarrying;
     public float BoxSize = 1;
-    
+    public LayerMask LiftLayer;
+    public float distance;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,11 +20,29 @@ public class Lift : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        canLift = Physics2D.OverlapBox(transform.position, new Vector2(BoxSize,BoxSize),0,10);
+        canLift =liftCollider= Physics2D.OverlapBox(transform.position, new Vector2(BoxSize,BoxSize),0, LiftLayer);
+        
         Debug.Log(canLift);
-        if(Input.GetButtonDown("Lift") && canLift)
+        if(Input.GetKeyDown(KeyCode.RightShift) && canLift && !iscarrying)
         {
             Debug.Log("Hi");
+            Liftable = liftCollider.gameObject;
+            Liftable.transform.SetParent(holdSpot);
+            Liftable.transform.position = holdSpot.position;
+            Liftable.GetComponent<Rigidbody2D>().simulated = false;
+            Liftable.GetComponent<BoxCollider2D>().enabled = false;
+            iscarrying = true;
+        }
+        if (Input.GetKeyUp(KeyCode.RightShift) && iscarrying)
+        {
+            Debug.Log("Hi");
+            
+            Liftable.transform.SetParent(null);
+            Liftable.transform.position = holdSpot.position+new Vector3(0,distance,0);
+            Liftable.GetComponent<Rigidbody2D>().simulated = true;
+            Liftable.GetComponent<BoxCollider2D>().enabled = true;
+            Liftable = null;
+            iscarrying = false;
         }
     }
 
