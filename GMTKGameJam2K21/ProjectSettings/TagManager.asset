@@ -13,9 +13,15 @@ TagManager:
   - UI
   - 
   - 
+<<<<<<< Updated upstream
   - Player
   - Object
   - 
+=======
+  - Solid
+  - Delicate
+  - RotationObject
+>>>>>>> Stashed changes
   - 
   - 
   - 
