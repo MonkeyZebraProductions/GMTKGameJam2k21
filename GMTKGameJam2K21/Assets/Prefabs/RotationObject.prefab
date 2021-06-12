@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 3570224464141609400}
   - component: {fileID: 3570224464141609403}
   - component: {fileID: 3570224464141609402}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: RotationObject
-  m_TagString: Untagged
+  m_TagString: RotationObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,4 +121,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f46b71b39abbf746b2edba730dc51fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotationAngle: 65
+  RotationAngle: 90

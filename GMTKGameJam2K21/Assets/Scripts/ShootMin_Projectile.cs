@@ -10,8 +10,7 @@ public class ShootMin_Projectile : MonoBehaviour
     private Vector3 _velocity;
     private LayerMask _solidLayerMask = 0;
     private LayerMask _delicateLayerMask = 0;
-    private LayerMask _rotationObjectLayerMask = 0;
-    
+    private GameObject _currentRotationObject;
     internal Quaternion ProjectileRotation; //Change this when you want to change the projectile rotation.
 
     private void Start()
@@ -21,12 +20,11 @@ public class ShootMin_Projectile : MonoBehaviour
         _projectileSpeed = ProjectilesManager.Instance.ProjectileSpeed;
         _solidLayerMask = ProjectilesManager.Instance.SolidLayerMask;
         _delicateLayerMask = ProjectilesManager.Instance.DelicateLayerMask;
-        _rotationObjectLayerMask = ProjectilesManager.Instance.RotationObjectLayerMask;
     }
 
     private void Update()
     {
-        transform.rotation = ProjectileRotation;
+        transform.rotation = Quaternion.Lerp(transform.rotation,ProjectileRotation, 0.5f);
         
         MoveProjectile();
         CollisionOverlap();
@@ -48,14 +46,15 @@ public class ShootMin_Projectile : MonoBehaviour
         var delicateOverlap = Physics2D.OverlapBox(_boxCollider2D.bounds.center, _boxCollider2D.size, transform.rotation.z, _delicateLayerMask);
         InteractWithDelicates(delicateOverlap);
         
-        var rotationObjectOverlap = Physics2D.OverlapBox(_boxCollider2D.bounds.center, _boxCollider2D.size, transform.rotation.z, _rotationObjectLayerMask);
+        var rotationObjectOverlap = Physics2D.OverlapBox(_boxCollider2D.bounds.center, _boxCollider2D.size, transform.rotation.z);
         InteractWithRotationObjects(rotationObjectOverlap);
     }
     
     private void InteractWithSolids(Collider2D solidOverlap)
     {
-        if (solidOverlap != null)
+        if (solidOverlap != null && !solidOverlap.CompareTag("RotationObject"))
         {
+            Debug.Log("Solid");
             Destroy(gameObject);
         }
     }
@@ -64,23 +63,34 @@ public class ShootMin_Projectile : MonoBehaviour
     {
         if (delicateOverlap != null)
         {
+            Debug.Log("Delicate");
             Destroy(delicateOverlap.gameObject);
         }
     }
     
     private void InteractWithRotationObjects(Collider2D rotationObjectOverlap)
     {
-        if (rotationObjectOverlap != null)
+        if (rotationObjectOverlap != null && rotationObjectOverlap.CompareTag("RotationObject"))
         {
-            var zRotation = rotationObjectOverlap.gameObject.GetComponent<RotationObject>().RotationAngle;
+            if (rotationObjectOverlap.gameObject != _currentRotationObject)
+            {
+                transform.position = rotationObjectOverlap.bounds.center;
 
-            ProjectileRotation = Quaternion.Euler(new Vector3(ProjectileRotation.eulerAngles.x, ProjectileRotation.eulerAngles.y, zRotation));
+                var zRotation = rotationObjectOverlap.gameObject.GetComponent<RotationObject>().RotationAngle;
+
+                ProjectileRotation = Quaternion.Euler(new Vector3(ProjectileRotation.eulerAngles.x, ProjectileRotation.eulerAngles.y, zRotation));
+
+                _currentRotationObject = rotationObjectOverlap.gameObject;
+                
+                Debug.Log("RotationObject");
+            }
         }
     }
 
     //Basically when it gets out of the screen, as there is no other way in the current project that it will go invisible.
     private void OnBecameInvisible()
     {
+        Debug.Log("BecameInvisible");
         Destroy(gameObject);
     }
 }

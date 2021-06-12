@@ -26,9 +26,7 @@ public class ProjectilesManager : MonoBehaviour
     public LayerMask SolidLayerMask = 0;
     [Tooltip("Projectiles will destroy and pass through delicate objects")]
     public LayerMask DelicateLayerMask = 0;
-    
-    public LayerMask RotationObjectLayerMask = 0;
-    
+
     [SerializeField] private Object _projectilePrefab = null;
     
     public void ShootProjectile()
