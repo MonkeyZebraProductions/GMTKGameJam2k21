@@ -55,6 +55,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Button.cs" t="Include" />
           <e p="Lift.cs" t="Include" />
           <e p="Misc_" t="Include">
             <e p="DontDestroyOnLoad.cs" t="Include" />
