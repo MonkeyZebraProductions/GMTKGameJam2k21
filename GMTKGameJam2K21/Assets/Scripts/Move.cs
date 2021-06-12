@@ -8,6 +8,8 @@ public class Move : MonoBehaviour
     float horizontalInput;
     float verticalInput;
     public bool Arrowkey;
+    public Vector3 movem;
+    public Vector3 facedirection;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,12 +33,17 @@ public class Move : MonoBehaviour
             //get the Input from Vertical axis
             verticalInput = Input.GetAxis("Vertical");
         }
-        Vector3 move = new Vector3(horizontalInput,
+
+        if (horizontalInput > 0.7 || horizontalInput < -0.7 || verticalInput > 0.7 || verticalInput < -0.7)
+        {
+            facedirection = movem;
+        }
+        movem = new Vector3(horizontalInput,
             verticalInput, 0);
-        move.Normalize();
+        movem.Normalize();
         //update the position
-        transform.position = transform.position + move * Speed * Time.deltaTime;
-        Debug.Log(move);
+        transform.position = transform.position + movem * Speed * Time.deltaTime;
+        //Debug.Log(movem.x);
     }
         
     
