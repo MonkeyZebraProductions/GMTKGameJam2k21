@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 8740154771406129147}
   - component: {fileID: 8740154771406129146}
   - component: {fileID: 6159124989145833643}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: RotationObject Diagonal
-  m_TagString: RotationObject
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

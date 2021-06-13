@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2634332863892253008}
   m_Layer: 15
   m_Name: RotationObject Diagonal Liftable
-  m_TagString: Lift
+  m_TagString: Liftable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

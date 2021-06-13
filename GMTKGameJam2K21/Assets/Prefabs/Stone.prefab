@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7620979250494170473}
   - component: {fileID: 7620979250494170474}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: New Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,9 +93,9 @@ GameObject:
   - component: {fileID: 7620979250833481637}
   - component: {fileID: 7620979250833481636}
   - component: {fileID: 7620979250833481635}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Stone
-  m_TagString: Untagged
+  m_TagString: Liftable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
