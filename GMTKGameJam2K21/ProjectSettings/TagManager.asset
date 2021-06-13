@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Liftable
   - Lift
+  - RotationObject
+  - Music
   layers:
   - Default
   - TransparentFX
@@ -27,8 +29,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Jectile
+  - Liftable
   - 
   - 
   - 

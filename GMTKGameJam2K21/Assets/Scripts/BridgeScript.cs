@@ -20,6 +20,7 @@ public class BridgeScript : MonoBehaviour
         {
             Instantiate(Bridge, BridgePos.position, Quaternion.identity);
             _sp.sprite = OnSprite;
+            FindObjectOfType<AudioManager>().Play("Victory");
         }
     }
 }

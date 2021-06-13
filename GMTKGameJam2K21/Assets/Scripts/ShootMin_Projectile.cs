@@ -46,7 +46,7 @@ public class ShootMin_Projectile : MonoBehaviour
         var delicateOverlap = Physics2D.OverlapBox(_boxCollider2D.bounds.center, _boxCollider2D.size, transform.rotation.z, _delicateLayerMask);
         InteractWithDelicates(delicateOverlap);
         
-        var rotationObjectOverlap = Physics2D.OverlapBox(_boxCollider2D.bounds.center, _boxCollider2D.size, transform.rotation.z);
+        var rotationObjectOverlap = Physics2D.OverlapBox(_boxCollider2D.bounds.center, _boxCollider2D.size, transform.rotation.z, _solidLayerMask);
         InteractWithRotationObjects(rotationObjectOverlap);
     }
     
@@ -64,7 +64,9 @@ public class ShootMin_Projectile : MonoBehaviour
         if (delicateOverlap != null)
         {
             Debug.Log("Delicate");
+            FindObjectOfType<AudioManager>().Play("BoxSmash");
             Destroy(delicateOverlap.gameObject);
+            Destroy(gameObject);
         }
     }
     

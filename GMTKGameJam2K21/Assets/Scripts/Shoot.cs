@@ -7,10 +7,12 @@ public class Shoot : MonoBehaviour
     public GameObject Projectile;
     
     public Move movement;
+
+    private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -22,6 +24,8 @@ public class Shoot : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.LeftShift))
         {
             Instantiate(Projectile, transform.position, Quaternion.Euler(0,0,angle));
+            animator.Play("ShootShoot");
+            FindObjectOfType<AudioManager>().Play("Shoot");
         }
     }
 }

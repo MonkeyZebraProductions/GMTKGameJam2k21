@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6002791918234305585}
   - component: {fileID: 6002791918234305590}
+  - component: {fileID: 559106760946140543}
   m_Layer: 0
   m_Name: Player Sprite
   m_TagString: Untagged
@@ -82,6 +83,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &559106760946140543
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6002791918234305584}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a8253ca740b682c44855842f597819eb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6002791919700586850
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,5 +212,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f8cbf3beeae9e44c96e229a75769cc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Projectile: {fileID: 1062123491601594054, guid: 0121d2384677fe340af53d6bb37820fd, type: 3}
+  Projectile: {fileID: 1062123491601594054, guid: ed96f56e29ab6d145b43dafd80cbf255, type: 3}
   movement: {fileID: 6002791919700586854}
