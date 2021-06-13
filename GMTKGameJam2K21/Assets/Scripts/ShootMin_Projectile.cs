@@ -13,7 +13,6 @@ public class ShootMin_Projectile : MonoBehaviour
     private Vector3 _velocity;
     private LayerMask _solidLayerMask = 0;
     private LayerMask _delicateLayerMask = 0;
-    private LayerMask _rotatedObjectLayerMask = 0;
     private LayerMask _winObjectLayerMask = 0;
     private GameObject _currentRotationObject;
     private GameObject _currentWinObject;
@@ -26,8 +25,7 @@ public class ShootMin_Projectile : MonoBehaviour
         _projectileSpeed = ProjectilesManager.Instance.ProjectileSpeed;
         _solidLayerMask = ProjectilesManager.Instance.SolidLayerMask;
         _delicateLayerMask = ProjectilesManager.Instance.DelicateLayerMask;
-        _rotatedObjectLayerMask = ProjectilesManager.Instance.RotationObjectsLayerMask;
-            _winObjectLayerMask = ProjectilesManager.Instance.WinObjectLayerMask;
+        _winObjectLayerMask = ProjectilesManager.Instance.WinObjectLayerMask;
     }
 
     private void Update()
@@ -53,10 +51,9 @@ public class ShootMin_Projectile : MonoBehaviour
 
         var delicateOverlap = Physics2D.OverlapBox(_boxCollider2D.bounds.center, _boxCollider2D.size, transform.rotation.z, _delicateLayerMask);
         InteractWithDelicates(delicateOverlap);
-
-        var rotationObjectOverlap = Physics2D.OverlapBox(_boxCollider2D.bounds.center, _boxCollider2D.size, transform.rotation.z, _rotatedObjectLayerMask);
-        InteractWithRotationObjects(rotationObjectOverlap);
-
+        
+        InteractWithRotationObjects(solidOverlap);
+        
         var winObjectOverlap = Physics2D.OverlapBox(_boxCollider2D.bounds.center, _boxCollider2D.size, transform.rotation.z, _winObjectLayerMask);
         InteractWithWinObject(winObjectOverlap);
     }
@@ -75,7 +72,9 @@ public class ShootMin_Projectile : MonoBehaviour
         if (delicateOverlap != null)
         {
             Debug.Log("Delicate");
+            FindObjectOfType<AudioManager>().Play("BoxSmash");
             Destroy(delicateOverlap.gameObject);
+            Destroy(gameObject);
         }
     }
 

@@ -11,28 +11,20 @@ public class Lift : MonoBehaviour
     public float BoxSize = 1;
     public LayerMask LiftLayer;
     public float distance;
+    private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        liftCollider= Physics2D.OverlapBox(transform.position, new Vector2(BoxSize,BoxSize),0, ~0);
-
-        if (liftCollider.CompareTag("Liftable"))
-        {
-            canLift = true;
-        }
-        else
-        {
-            canLift = false;
-        }
-        
-        // Debug.Log(canLift);
-        if(Input.GetKeyDown(KeyCode.RightShift) && canLift && !iscarrying)
+        canLift =liftCollider= Physics2D.OverlapBox(transform.position, new Vector2(BoxSize,BoxSize),0, LiftLayer);
+        animator.SetBool("isCarrying", iscarrying);
+        Debug.Log(canLift);
+        if(Input.GetKeyDown(KeyCode.RightControl) && canLift && !iscarrying)
         {
             Debug.Log("Hi");
             Liftable = liftCollider.gameObject;
@@ -40,9 +32,11 @@ public class Lift : MonoBehaviour
             Liftable.transform.position = holdSpot.position;
             Liftable.GetComponent<Rigidbody2D>().simulated = false;
             Liftable.GetComponent<BoxCollider2D>().enabled = false;
+            animator.Play("PickUp");
+            FindObjectOfType<AudioManager>().Play("Lift");
             iscarrying = true;
         }
-        if (Input.GetKeyUp(KeyCode.RightShift) && iscarrying)
+        if (Input.GetKeyUp(KeyCode.RightControl) && iscarrying)
         {
             Debug.Log("Hi");
             
@@ -51,6 +45,8 @@ public class Lift : MonoBehaviour
             Liftable.GetComponent<Rigidbody2D>().simulated = true;
             Liftable.GetComponent<BoxCollider2D>().enabled = true;
             Liftable = null;
+            animator.Play("Drop");
+            FindObjectOfType<AudioManager>().Play("Drop");
             iscarrying = false;
         }
     }

@@ -10,10 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 5372280009175296004}
   - component: {fileID: 5372280009175296005}
-  - component: {fileID: 528438678}
+  - component: {fileID: 6509280244517734286}
+  - component: {fileID: 3468085007307849883}
+  - component: {fileID: 7460509987302304997}
   m_Layer: 0
   m_Name: Manager
-  m_TagString: Untagged
+  m_TagString: Music
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,22 +46,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08919b959d1d76f42a12bb35f88dd32a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProjectileSpeed: 12
+  ProjectileSpeed: 20
   SolidLayerMask:
     serializedVersion: 2
-    m_Bits: 2304
+    m_Bits: 2099200
   DelicateLayerMask:
     serializedVersion: 2
     m_Bits: 4096
-  RotationObjectsLayerMask:
-    serializedVersion: 2
-    m_Bits: 32768
   WinObjectLayerMask:
     serializedVersion: 2
     m_Bits: 65536
   WinBubble: {fileID: 0}
-  _projectilePrefab: {fileID: 1062123491601594054, guid: 0121d2384677fe340af53d6bb37820fd, type: 3}
---- !u!114 &528438678
+  _projectilePrefab: {fileID: 1062123491601594054, guid: ed96f56e29ab6d145b43dafd80cbf255, type: 3}
+--- !u!114 &6509280244517734286
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -68,6 +67,143 @@ MonoBehaviour:
   m_GameObject: {fileID: 5372280009175296006}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3deaf694b6005644f841502dfe44d259, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f0b5bbde7680d54da21118c596bc97a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &3468085007307849883
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5372280009175296006}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4309edcc739239242bcaa145d7007808, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.455
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &7460509987302304997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5372280009175296006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2927e5cce573d41bc468b510923629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Walk1
+    clip: {fileID: 0}
+    volume: 1
+    source: {fileID: 0}
+  - name: Shoot
+    clip: {fileID: 8300000, guid: 4fc9024d9a9a9cd4795c732044047d47, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: Drop
+    clip: {fileID: 8300000, guid: 63c116e3f01fe9e43897916f99aa4e4a, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: Switch On
+    clip: {fileID: 8300000, guid: 0f4b5712072511e4798d988b8d2d96ba, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: Lift
+    clip: {fileID: 8300000, guid: 87122ffeab604084d8e6bac3a460d866, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: Victory
+    clip: {fileID: 8300000, guid: d87b38a5a6c8a544d8685383324f5440, type: 3}
+    volume: 1
+    source: {fileID: 0}
+  - name: Box Smash
+    clip: {fileID: 8300000, guid: 19458a1ceae615048a27af244899822a, type: 3}
+    volume: 0
+    source: {fileID: 0}
