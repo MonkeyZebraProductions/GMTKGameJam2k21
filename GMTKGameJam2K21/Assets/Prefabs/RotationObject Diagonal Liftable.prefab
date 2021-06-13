@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 629897252876488192}
   - component: {fileID: 629897252876488193}
   - component: {fileID: 2634332863892253008}
-  m_Layer: 13
+  m_Layer: 15
   m_Name: RotationObject Diagonal Liftable
   m_TagString: Lift
   m_Icon: {fileID: 0}

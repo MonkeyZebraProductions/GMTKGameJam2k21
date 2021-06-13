@@ -4,11 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< Updated upstream
   - RotationObject
-=======
   - Lift
->>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
@@ -30,7 +27,7 @@ TagManager:
   - 
   - 
   - 
-  - Projectile
+  - 
   - 
   - 
   - 
@@ -44,7 +41,7 @@ TagManager:
   - 
   m_SortingLayers:
   - name: BG
-    uniqueID: 2000103209
+    uniqueID: 3735253157
     locked: 0
   - name: Default
     uniqueID: 0
