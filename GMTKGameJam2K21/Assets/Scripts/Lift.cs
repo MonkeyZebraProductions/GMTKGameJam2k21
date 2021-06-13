@@ -23,7 +23,7 @@ public class Lift : MonoBehaviour
         canLift =liftCollider= Physics2D.OverlapBox(transform.position, new Vector2(BoxSize,BoxSize),0, LiftLayer);
         
         Debug.Log(canLift);
-        if(Input.GetKeyDown(KeyCode.RightShift) && canLift && !iscarrying)
+        if(Input.GetKeyDown(KeyCode.RightControl) && canLift && !iscarrying)
         {
             Debug.Log("Hi");
             Liftable = liftCollider.gameObject;
@@ -33,7 +33,7 @@ public class Lift : MonoBehaviour
             Liftable.GetComponent<BoxCollider2D>().enabled = false;
             iscarrying = true;
         }
-        if (Input.GetKeyUp(KeyCode.RightShift) && iscarrying)
+        if (Input.GetKeyUp(KeyCode.Insert) && iscarrying)
         {
             Debug.Log("Hi");
             
