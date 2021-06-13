@@ -54,7 +54,11 @@
             </e>
           </e>
         </e>
+        <e p="SceneTransition" t="Include">
+          <e p="SceneTransition.cs" t="Include" />
+        </e>
         <e p="Scripts" t="Include">
+          <e p="BridgeScript.cs" t="Include" />
           <e p="Button.cs" t="Include" />
           <e p="Lift.cs" t="Include" />
           <e p="Misc_" t="Include">

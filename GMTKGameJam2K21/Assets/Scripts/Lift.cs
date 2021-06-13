@@ -20,10 +20,19 @@ public class Lift : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        canLift =liftCollider= Physics2D.OverlapBox(transform.position, new Vector2(BoxSize,BoxSize),0, LiftLayer);
+        liftCollider= Physics2D.OverlapBox(transform.position, new Vector2(BoxSize,BoxSize),0, ~0);
+
+        if (liftCollider.CompareTag("Liftable"))
+        {
+            canLift = true;
+        }
+        else
+        {
+            canLift = false;
+        }
         
-        Debug.Log(canLift);
-        if(Input.GetKeyDown(KeyCode.RightControl) && canLift && !iscarrying)
+        // Debug.Log(canLift);
+        if(Input.GetKeyDown(KeyCode.RightShift) && canLift && !iscarrying)
         {
             Debug.Log("Hi");
             Liftable = liftCollider.gameObject;
@@ -33,7 +42,7 @@ public class Lift : MonoBehaviour
             Liftable.GetComponent<BoxCollider2D>().enabled = false;
             iscarrying = true;
         }
-        if (Input.GetKeyUp(KeyCode.Insert) && iscarrying)
+        if (Input.GetKeyUp(KeyCode.RightShift) && iscarrying)
         {
             Debug.Log("Hi");
             

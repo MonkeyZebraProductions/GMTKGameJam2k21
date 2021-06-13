@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 7620979250833481637}
   - component: {fileID: 7620979250833481636}
   - component: {fileID: 7620979250833481635}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Stone
   m_TagString: Liftable
   m_Icon: {fileID: 0}

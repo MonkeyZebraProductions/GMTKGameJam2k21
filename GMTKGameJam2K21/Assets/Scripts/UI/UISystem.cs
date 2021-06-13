@@ -25,7 +25,7 @@ public class UISystem : MonoBehaviour
     {
         screens = gameObject.GetComponentsInChildren<UIScreen>(true);
         screenButtons = gameObject.GetComponentsInChildren<UnityEngine.UI.Button>(true);
-
+        
         foreach (var screen in screens)
         {
             var screenCanvas = screen.GetComponent<CanvasGroup>();
@@ -147,20 +147,26 @@ public class UISystem : MonoBehaviour
         currentScreen = null;
     }
 
+    public void LoadNextSceneInNumberOrder()
+    {
+        LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+    
     public void ReturnToTitleScreen()
     {
         LoadScene(0);
-        Destroy(gameObject);
     }
-
-    public void LoadScene(string SceneName) //Just used for the "Play" button.
-    {
-        SceneManager.LoadScene(SceneName);
-    }
-
+    
     public void LoadScene(int SceneNumber) //Just used for the "Play" button.
     {
-        SceneManager.LoadScene(SceneNumber);
+        if (SceneManager.GetActiveScene().buildIndex != 0)
+        {
+            SceneTransition.Instance.StartTransition(SceneNumber);
+        }
+        else
+        {
+            SceneManager.LoadScene(1);
+        }
     }
 
     public void ExitGame() //Just used for the "Exit" button.

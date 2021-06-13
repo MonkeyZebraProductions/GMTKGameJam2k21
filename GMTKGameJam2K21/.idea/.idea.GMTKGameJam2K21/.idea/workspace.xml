@@ -20,14 +20,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89cb1747-35ca-4560-8eb6-b1698d281f58" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.GMTKGameJam2K21/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GMTKGameJam2K21/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GMTKGameJam2K21/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GMTKGameJam2K21/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GMTKGameJam2K21/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GMTKGameJam2K21/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Canvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Canvas.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Canvas.prefab.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Manager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Manager.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Projectile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Projectile.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/RotationObject.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/RotationObject.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MZP Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MZP Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Stone.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Stone.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Switch.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Switch.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/No Virus SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/No Virus SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DriveZoneScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/DriveZoneScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MZP Scene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MZP Scene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Puzzle 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Puzzle 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TitleScreen.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TitleScreen.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Lift.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Lift.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ProjectilesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ProjectilesManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ShootMin_Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ShootMin_Projectile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UISystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UISystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,11 +55,14 @@
     <setting file="file://$USER_HOME$/Downloads/Semphonia/Assets/Scripts/DialogueSystem/DialogueManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/Semphonia/Assets/Scripts/UI/ShiroNekoUIOptionsMenu.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UITimerScreen.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/GMTKGameJam2k21/GMTKGameJam2K21/Assets/Scripts/ShootMin_Projectile.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Downloads/Semphonia/Assets/Scripts/Utility &amp; Miscs/ShiroNekoUtility.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/GMTKGameJam2k21/GMTKGameJam2K21/Assets/Scripts/Lift.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Desktop/GMTKGameJam2k21/GMTKGameJam2K21/Assets/Scripts/ProjectilesManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ProjectilesManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/Semphonia/Assets/Scripts/UI/ShiroNekoUITimerScreen.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/Semphonia/Assets/Scripts/UI/ShiroNekoUISystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/Semphonia/Assets/Scripts/CollisionAndMovements/Interacting/OverlapInteracting.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Downloads/Semphonia/Assets/Scripts/Utility &amp; Miscs/ShiroNekoUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/Semphonia/Assets/Scripts/CollisionAndMovements/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/Semphonia/Assets/Scripts/UI/ShiroNekoUIScreen.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -62,9 +78,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UIScreen.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/UITimerScreen.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DontDestroyOnLoad.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UISystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ProjectilesManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ShootMin_Projectile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ProjectilesManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Lift.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Misc_/DestroyOnTitleScreen.cs" />
+        <option value="$PROJECT_DIR$/Assets/SceneTransition/SceneTransition.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/UISystem.cs" />
       </list>
     </option>
   </component>
@@ -124,6 +143,8 @@
       <workItem from="1623512340932" duration="5084000" />
       <workItem from="1623518554494" duration="497000" />
       <workItem from="1623520916442" duration="3157000" />
+      <workItem from="1623596871329" duration="1691000" />
+      <workItem from="1623598648095" duration="300000" />
     </task>
     <servers />
   </component>
