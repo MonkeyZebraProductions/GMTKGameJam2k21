@@ -33,8 +33,6 @@ public class ProjectilesManager : MonoBehaviour
     [Tooltip("Projectiles will destroy and pass through delicate objects")]
     public LayerMask DelicateLayerMask = 0;
 
-    public LayerMask RotationObjectsLayerMask = 0;
-
     [Tooltip("When activated by a projectile, it shows a bubble that you can press to go to the next level")]
     public LayerMask WinObjectLayerMask = 0;
 

@@ -58,6 +58,7 @@
           <e p="SceneTransition.cs" t="Include" />
         </e>
         <e p="Scripts" t="Include">
+          <e p="AudioManager.cs" t="Include" />
           <e p="BridgeScript.cs" t="Include" />
           <e p="Button.cs" t="Include" />
           <e p="Lift.cs" t="Include" />
@@ -66,10 +67,12 @@
             <e p="Utility.cs" t="Include" />
           </e>
           <e p="Move.cs" t="Include" />
+          <e p="MusicClass.cs" t="Include" />
           <e p="ProjectilesManager.cs" t="Include" />
           <e p="RotationObject.cs" t="Include" />
           <e p="Shoot.cs" t="Include" />
           <e p="ShootMin_Projectile.cs" t="Include" />
+          <e p="Sound.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="AudioOptions.cs" t="Include" />
             <e p="UIScreen.cs" t="Include" />
